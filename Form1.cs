@@ -16,7 +16,8 @@ namespace veterinarske_ordinacije
         public Form1()
         {
             InitializeComponent();
-        }
+            
+        }        
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
@@ -33,6 +34,11 @@ namespace veterinarske_ordinacije
                 }
                 con.Close();
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
