@@ -43,7 +43,7 @@ namespace veterinarske_ordinacije
             // 
             this.listBoxKraji.FormattingEnabled = true;
             this.listBoxKraji.ItemHeight = 20;
-            this.listBoxKraji.Location = new System.Drawing.Point(856, 407);
+            this.listBoxKraji.Location = new System.Drawing.Point(604, 78);
             this.listBoxKraji.Name = "listBoxKraji";
             this.listBoxKraji.Size = new System.Drawing.Size(544, 284);
             this.listBoxKraji.TabIndex = 0;
@@ -51,7 +51,7 @@ namespace veterinarske_ordinacije
             // btnRefresh
             // 
             this.btnRefresh.AutoSize = true;
-            this.btnRefresh.Location = new System.Drawing.Point(1072, 532);
+            this.btnRefresh.Location = new System.Drawing.Point(1154, 332);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(76, 30);
             this.btnRefresh.TabIndex = 1;

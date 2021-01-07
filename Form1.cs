@@ -22,16 +22,17 @@ namespace veterinarske_ordinacije
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            //Displays all kraji in list box
             listBoxOrdinacije.Items.Clear();
             using (NpgsqlConnection con = new NpgsqlConnection(baza))
             {
                 con.Open();
-                NpgsqlCommand com = new NpgsqlCommand("SELECT posta, ime FROM kraji", con);
+                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM izpisKraji()", con);
                 NpgsqlDataReader reader = com.ExecuteReader();
                 while (reader.Read())
                 {
-                    string posta = reader.GetString(0);
-                    string ime = reader.GetString(1);
+                    string ime = reader.GetString(0);
+                    string posta = reader.GetString(1);
                     listBoxKraji.Items.Add(ime + ", " + posta);
                 }
                 con.Close();
@@ -40,6 +41,7 @@ namespace veterinarske_ordinacije
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //Lists all ordinacije in ordinacije list box
             using (NpgsqlConnection con = new NpgsqlConnection(baza))
             {
                 con.Open();
@@ -58,6 +60,7 @@ namespace veterinarske_ordinacije
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            //Searches all ordinacije which are from kraj
             listBoxOrdinacije.Items.Clear();
             using (NpgsqlConnection con = new NpgsqlConnection(baza))
             {
