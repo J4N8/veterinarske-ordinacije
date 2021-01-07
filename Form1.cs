@@ -56,6 +56,38 @@ namespace veterinarske_ordinacije
                 }
                 con.Close();
             }
+
+            //Lists all zaposleni in zaposleni list box
+            using (NpgsqlConnection con = new NpgsqlConnection(baza))
+            {
+                con.Open();
+                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM izpisZaposleni()", con);
+                NpgsqlDataReader reader = com.ExecuteReader();
+                while (reader.Read())
+                {
+                    string ime = reader.GetString(0);
+                    string priimek = reader.GetString(1);
+                    string ordinacija = reader.GetString(2);
+                    string kraj = reader.GetString(3);
+                    listBoxZaposleni.Items.Add(ime + ", " + priimek + ", " + ordinacija + ", " + kraj);
+                }
+                con.Close();
+            }
+
+            //Lists all kraji in kraji combo box
+            using (NpgsqlConnection con = new NpgsqlConnection(baza))
+            {
+                con.Open();
+                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM izpisKraji()", con);
+                NpgsqlDataReader reader = com.ExecuteReader();
+                while (reader.Read())
+                {
+                    string ime = reader.GetString(0);
+                    string posta = reader.GetString(1);
+                    comboBoxKraji.Items.Add(ime + ", " + posta);
+                }
+                con.Close();
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -65,7 +97,7 @@ namespace veterinarske_ordinacije
             using (NpgsqlConnection con = new NpgsqlConnection(baza))
             {
                 con.Open();
-                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM izpisOrdinacijeIzKraja('" + comboBoxKraji.Text + "')", con);
+                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM izpisOrdinacijeIzKraja('" + comboBoxKraji.Text.Remove(comboBoxKraji.Text.Length - 4) + "')", con);
                 NpgsqlDataReader reader = com.ExecuteReader();
                 while (reader.Read())
                 {

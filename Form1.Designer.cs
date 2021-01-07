@@ -36,6 +36,7 @@ namespace veterinarske_ordinacije
             this.label1 = new System.Windows.Forms.Label();
             this.groupBoxSearch = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.listBoxZaposleni = new System.Windows.Forms.ListBox();
             this.groupBoxSearch.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +44,7 @@ namespace veterinarske_ordinacije
             // 
             this.listBoxKraji.FormattingEnabled = true;
             this.listBoxKraji.ItemHeight = 20;
-            this.listBoxKraji.Location = new System.Drawing.Point(604, 78);
+            this.listBoxKraji.Location = new System.Drawing.Point(634, 78);
             this.listBoxKraji.Name = "listBoxKraji";
             this.listBoxKraji.Size = new System.Drawing.Size(544, 284);
             this.listBoxKraji.TabIndex = 0;
@@ -51,7 +52,7 @@ namespace veterinarske_ordinacije
             // btnRefresh
             // 
             this.btnRefresh.AutoSize = true;
-            this.btnRefresh.Location = new System.Drawing.Point(1154, 332);
+            this.btnRefresh.Location = new System.Drawing.Point(1259, 568);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(76, 30);
             this.btnRefresh.TabIndex = 1;
@@ -110,6 +111,15 @@ namespace veterinarske_ordinacije
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // listBoxZaposleni
+            // 
+            this.listBoxZaposleni.FormattingEnabled = true;
+            this.listBoxZaposleni.ItemHeight = 20;
+            this.listBoxZaposleni.Location = new System.Drawing.Point(12, 368);
+            this.listBoxZaposleni.Name = "listBoxZaposleni";
+            this.listBoxZaposleni.Size = new System.Drawing.Size(544, 284);
+            this.listBoxZaposleni.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -117,6 +127,7 @@ namespace veterinarske_ordinacije
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1412, 703);
+            this.Controls.Add(this.listBoxZaposleni);
             this.Controls.Add(this.groupBoxSearch);
             this.Controls.Add(this.listBoxOrdinacije);
             this.Controls.Add(this.btnRefresh);
@@ -140,6 +151,7 @@ namespace veterinarske_ordinacije
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBoxSearch;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ListBox listBoxZaposleni;
     }
 }
 
