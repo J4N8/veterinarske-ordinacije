@@ -22,21 +22,7 @@ namespace veterinarske_ordinacije
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            //Displays all kraji in list box
-            listBoxOrdinacije.Items.Clear();
-            using (NpgsqlConnection con = new NpgsqlConnection(baza))
-            {
-                con.Open();
-                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM izpisKraji()", con);
-                NpgsqlDataReader reader = com.ExecuteReader();
-                while (reader.Read())
-                {
-                    string ime = reader.GetString(0);
-                    string posta = reader.GetString(1);
-                    listBoxKraji.Items.Add(ime + ", " + posta);
-                }
-                con.Close();
-            }
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -52,7 +38,7 @@ namespace veterinarske_ordinacije
                     string ime = reader.GetString(0);
                     string naslov = reader.GetString(1);
                     string kraj = reader.GetString(2);
-                    listBoxOrdinacije.Items.Add(ime + ", " + naslov + ", " + kraj);
+                    listBoxOrdinacije.Items.Add(ime + " | " + naslov + ", " + kraj);
                 }
                 con.Close();
             }
@@ -69,7 +55,7 @@ namespace veterinarske_ordinacije
                     string priimek = reader.GetString(1);
                     string ordinacija = reader.GetString(2);
                     string kraj = reader.GetString(3);
-                    listBoxZaposleni.Items.Add(ime + ", " + priimek + ", " + ordinacija + ", " + kraj);
+                    listBoxZaposleni.Items.Add(ime + ", " + priimek + " | " + ordinacija + ", " + kraj);
                 }
                 con.Close();
             }
@@ -85,6 +71,22 @@ namespace veterinarske_ordinacije
                     string ime = reader.GetString(0);
                     string posta = reader.GetString(1);
                     comboBoxKraji.Items.Add(ime + ", " + posta);
+                }
+                con.Close();
+            }
+
+            //Displays all kraji in list box
+            listBoxOrdinacije.Items.Clear();
+            using (NpgsqlConnection con = new NpgsqlConnection(baza))
+            {
+                con.Open();
+                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM izpisKraji()", con);
+                NpgsqlDataReader reader = com.ExecuteReader();
+                while (reader.Read())
+                {
+                    string ime = reader.GetString(0);
+                    string posta = reader.GetString(1);
+                    listBoxKraji.Items.Add(ime + ", " + posta);
                 }
                 con.Close();
             }

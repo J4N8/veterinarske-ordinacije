@@ -30,7 +30,6 @@ namespace veterinarske_ordinacije
         private void InitializeComponent()
         {
             this.listBoxKraji = new System.Windows.Forms.ListBox();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.listBoxOrdinacije = new System.Windows.Forms.ListBox();
             this.comboBoxKraji = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,21 +43,10 @@ namespace veterinarske_ordinacije
             // 
             this.listBoxKraji.FormattingEnabled = true;
             this.listBoxKraji.ItemHeight = 20;
-            this.listBoxKraji.Location = new System.Drawing.Point(634, 78);
+            this.listBoxKraji.Location = new System.Drawing.Point(562, 78);
             this.listBoxKraji.Name = "listBoxKraji";
             this.listBoxKraji.Size = new System.Drawing.Size(544, 284);
             this.listBoxKraji.TabIndex = 0;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.AutoSize = true;
-            this.btnRefresh.Location = new System.Drawing.Point(1259, 568);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(76, 30);
-            this.btnRefresh.TabIndex = 1;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // listBoxOrdinacije
             // 
@@ -130,7 +118,6 @@ namespace veterinarske_ordinacije
             this.Controls.Add(this.listBoxZaposleni);
             this.Controls.Add(this.groupBoxSearch);
             this.Controls.Add(this.listBoxOrdinacije);
-            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.listBoxKraji);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -138,14 +125,12 @@ namespace veterinarske_ordinacije
             this.groupBoxSearch.ResumeLayout(false);
             this.groupBoxSearch.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.ListBox listBoxKraji;
-        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.ListBox listBoxOrdinacije;
         private System.Windows.Forms.ComboBox comboBoxKraji;
         private System.Windows.Forms.Label label1;
