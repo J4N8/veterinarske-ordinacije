@@ -35,6 +35,7 @@ namespace veterinarske_ordinacije
             this.comboBoxKraji = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBoxSearch = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.groupBoxSearch.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,6 +89,7 @@ namespace veterinarske_ordinacije
             // 
             // groupBoxSearch
             // 
+            this.groupBoxSearch.Controls.Add(this.btnSearch);
             this.groupBoxSearch.Controls.Add(this.comboBoxKraji);
             this.groupBoxSearch.Controls.Add(this.label1);
             this.groupBoxSearch.Location = new System.Drawing.Point(12, 12);
@@ -96,6 +98,17 @@ namespace veterinarske_ordinacije
             this.groupBoxSearch.TabIndex = 5;
             this.groupBoxSearch.TabStop = false;
             this.groupBoxSearch.Text = "Search";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.AutoSize = true;
+            this.btnSearch.Location = new System.Drawing.Point(463, 17);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 30);
+            this.btnSearch.TabIndex = 5;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // Form1
             // 
@@ -126,6 +139,7 @@ namespace veterinarske_ordinacije
         private System.Windows.Forms.ComboBox comboBoxKraji;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBoxSearch;
+        private System.Windows.Forms.Button btnSearch;
     }
 }
 

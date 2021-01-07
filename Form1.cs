@@ -13,6 +13,7 @@ namespace veterinarske_ordinacije
 {
     public partial class Form1 : Form
     {
+        private string baza = "Server=rogue.db.elephantsql.com; User Id=ercqedby;" + "Password=GtZ43Cgtya5QVYjQLsVKUw8TUX8elf0k; Database=ercqedby;";
         public Form1()
         {
             InitializeComponent();
@@ -21,7 +22,8 @@ namespace veterinarske_ordinacije
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            using (NpgsqlConnection con = new NpgsqlConnection("Server=rogue.db.elephantsql.com; User Id=ercqedby;" + "Password=GtZ43Cgtya5QVYjQLsVKUw8TUX8elf0k; Database=ercqedby;"))
+            listBoxOrdinacije.Items.Clear();
+            using (NpgsqlConnection con = new NpgsqlConnection(baza))
             {
                 con.Open();
                 NpgsqlCommand com = new NpgsqlCommand("SELECT posta, ime FROM kraji", con);
@@ -38,7 +40,39 @@ namespace veterinarske_ordinacije
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            using (NpgsqlConnection con = new NpgsqlConnection(baza))
+            {
+                con.Open();
+                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM izpisOrdinacije()", con);
+                NpgsqlDataReader reader = com.ExecuteReader();
+                while (reader.Read())
+                {
+                    string ime = reader.GetString(0);
+                    string naslov = reader.GetString(1);
+                    string kraj = reader.GetString(2);
+                    listBoxOrdinacije.Items.Add(ime + ", " + naslov + ", " + kraj);
+                }
+                con.Close();
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            listBoxOrdinacije.Items.Clear();
+            using (NpgsqlConnection con = new NpgsqlConnection(baza))
+            {
+                con.Open();
+                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM izpisOrdinacijeIzKraja('" + comboBoxKraji.Text + "')", con);
+                NpgsqlDataReader reader = com.ExecuteReader();
+                while (reader.Read())
+                {
+                    string ime = reader.GetString(0);
+                    string naslov = reader.GetString(1);
+                    string kraj = reader.GetString(2);
+                    listBoxOrdinacije.Items.Add(ime + ", " + naslov + ", " + kraj);
+                }
+                con.Close();
+            }
         }
     }
 }
