@@ -47,8 +47,8 @@ namespace veterinarske_ordinacije
             this.label4 = new System.Windows.Forms.Label();
             this.btnOrdinacijeVnos = new System.Windows.Forms.Button();
             this.btnOrdinacijeUpdate = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnZaposleniUpdate = new System.Windows.Forms.Button();
+            this.btnZaposleniVnos = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -164,8 +164,8 @@ namespace veterinarske_ordinacije
             // 
             this.tabPageZaposleni.Controls.Add(this.dateTimePickerDatumRoj);
             this.tabPageZaposleni.Controls.Add(this.label8);
-            this.tabPageZaposleni.Controls.Add(this.button1);
-            this.tabPageZaposleni.Controls.Add(this.button2);
+            this.tabPageZaposleni.Controls.Add(this.btnZaposleniUpdate);
+            this.tabPageZaposleni.Controls.Add(this.btnZaposleniVnos);
             this.tabPageZaposleni.Controls.Add(this.label5);
             this.tabPageZaposleni.Controls.Add(this.label6);
             this.tabPageZaposleni.Controls.Add(this.label7);
@@ -249,30 +249,30 @@ namespace veterinarske_ordinacije
             this.btnOrdinacijeUpdate.Text = "Posodobi";
             this.btnOrdinacijeUpdate.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnZaposleniUpdate
             // 
-            this.button1.AutoSize = true;
-            this.button1.Location = new System.Drawing.Point(235, 243);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 30);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Posodobi";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnZaposleniUpdate.AutoSize = true;
+            this.btnZaposleniUpdate.Location = new System.Drawing.Point(235, 243);
+            this.btnZaposleniUpdate.Name = "btnZaposleniUpdate";
+            this.btnZaposleniUpdate.Size = new System.Drawing.Size(85, 30);
+            this.btnZaposleniUpdate.TabIndex = 15;
+            this.btnZaposleniUpdate.Text = "Posodobi";
+            this.btnZaposleniUpdate.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnZaposleniVnos
             // 
-            this.button2.AutoSize = true;
-            this.button2.Location = new System.Drawing.Point(76, 243);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 30);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Vnos";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnZaposleniVnos.AutoSize = true;
+            this.btnZaposleniVnos.Location = new System.Drawing.Point(76, 243);
+            this.btnZaposleniVnos.Name = "btnZaposleniVnos";
+            this.btnZaposleniVnos.Size = new System.Drawing.Size(75, 30);
+            this.btnZaposleniVnos.TabIndex = 14;
+            this.btnZaposleniVnos.Text = "Vnos";
+            this.btnZaposleniVnos.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 115);
+            this.label5.Location = new System.Drawing.Point(3, 112);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 20);
             this.label5.TabIndex = 13;
@@ -281,7 +281,7 @@ namespace veterinarske_ordinacije
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 61);
+            this.label6.Location = new System.Drawing.Point(3, 58);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 20);
             this.label6.TabIndex = 12;
@@ -290,7 +290,7 @@ namespace veterinarske_ordinacije
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 15);
+            this.label7.Location = new System.Drawing.Point(3, 12);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 20);
             this.label7.TabIndex = 11;
@@ -298,14 +298,14 @@ namespace veterinarske_ordinacije
             // 
             // textBoxZaposleniPriimek
             // 
-            this.textBoxZaposleniPriimek.Location = new System.Drawing.Point(120, 58);
+            this.textBoxZaposleniPriimek.Location = new System.Drawing.Point(117, 55);
             this.textBoxZaposleniPriimek.Name = "textBoxZaposleniPriimek";
             this.textBoxZaposleniPriimek.Size = new System.Drawing.Size(416, 26);
             this.textBoxZaposleniPriimek.TabIndex = 10;
             // 
             // textBoxZaposleniIme
             // 
-            this.textBoxZaposleniIme.Location = new System.Drawing.Point(120, 12);
+            this.textBoxZaposleniIme.Location = new System.Drawing.Point(117, 9);
             this.textBoxZaposleniIme.Name = "textBoxZaposleniIme";
             this.textBoxZaposleniIme.Size = new System.Drawing.Size(416, 26);
             this.textBoxZaposleniIme.TabIndex = 9;
@@ -313,7 +313,7 @@ namespace veterinarske_ordinacije
             // comboBoxOrdinacija
             // 
             this.comboBoxOrdinacija.FormattingEnabled = true;
-            this.comboBoxOrdinacija.Location = new System.Drawing.Point(120, 156);
+            this.comboBoxOrdinacija.Location = new System.Drawing.Point(117, 153);
             this.comboBoxOrdinacija.Name = "comboBoxOrdinacija";
             this.comboBoxOrdinacija.Size = new System.Drawing.Size(416, 28);
             this.comboBoxOrdinacija.TabIndex = 8;
@@ -321,7 +321,7 @@ namespace veterinarske_ordinacije
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 164);
+            this.label8.Location = new System.Drawing.Point(3, 161);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(87, 20);
             this.label8.TabIndex = 16;
@@ -329,7 +329,7 @@ namespace veterinarske_ordinacije
             // 
             // dateTimePickerDatumRoj
             // 
-            this.dateTimePickerDatumRoj.Location = new System.Drawing.Point(120, 110);
+            this.dateTimePickerDatumRoj.Location = new System.Drawing.Point(117, 107);
             this.dateTimePickerDatumRoj.Name = "dateTimePickerDatumRoj";
             this.dateTimePickerDatumRoj.Size = new System.Drawing.Size(416, 26);
             this.dateTimePickerDatumRoj.TabIndex = 17;
@@ -380,8 +380,8 @@ namespace veterinarske_ordinacije
         private System.Windows.Forms.ComboBox comboBoxKraj;
         private System.Windows.Forms.Button btnOrdinacijeUpdate;
         private System.Windows.Forms.Button btnOrdinacijeVnos;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnZaposleniUpdate;
+        private System.Windows.Forms.Button btnZaposleniVnos;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
