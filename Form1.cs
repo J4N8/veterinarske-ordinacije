@@ -17,7 +17,6 @@ namespace veterinarske_ordinacije
         public Form1()
         {
             InitializeComponent();
-            
         }        
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -76,7 +75,6 @@ namespace veterinarske_ordinacije
             }
 
             //Displays all kraji in list box
-            listBoxOrdinacije.Items.Clear();
             using (NpgsqlConnection con = new NpgsqlConnection(baza))
             {
                 con.Open();
