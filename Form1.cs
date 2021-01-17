@@ -17,14 +17,9 @@ namespace veterinarske_ordinacije
         public Form1()
         {
             InitializeComponent();
-        }        
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void ResetDefault()
         {
             //Lists all ordinacije in ordinacije list box
             using (NpgsqlConnection con = new NpgsqlConnection(baza))
@@ -90,6 +85,16 @@ namespace veterinarske_ordinacije
             }
         }
 
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ResetDefault();
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
             //Searches all ordinacije which are from kraj
@@ -108,6 +113,11 @@ namespace veterinarske_ordinacije
                 }
                 con.Close();
             }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            ResetDefault();
         }
     }
 }
