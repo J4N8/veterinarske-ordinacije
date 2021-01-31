@@ -105,14 +105,14 @@ namespace veterinarske_ordinacije
             using (NpgsqlConnection con = new NpgsqlConnection(baza))
             {
                 con.Open();
-                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM izpisOrdinacijeIzKraja('" + comboBoxKraji.Text.Remove(comboBoxKraji.Text.Length - 4) + "')", con);
+                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM izpisOrdinacijeIzKraja('" + comboBoxKraji.Text.Substring(comboBoxKraji.Text.Length - 4) + "')", con);
                 NpgsqlDataReader reader = com.ExecuteReader();
                 while (reader.Read())
                 {
                     string ime = reader.GetString(0);
                     string naslov = reader.GetString(1);
-                    string kraj = reader.GetString(2);
-                    listBoxOrdinacije.Items.Add(ime + ", " + naslov + ", " + kraj);
+                    //string kraj = reader.GetString(2);
+                    listBoxOrdinacije.Items.Add(ime + ", " + naslov);// + ", " + kraj);
                 }
                 con.Close();
             }
