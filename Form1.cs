@@ -21,6 +21,9 @@ namespace veterinarske_ordinacije
 
         private void ResetDefault()
         {
+            listBoxKraji.Items.Clear();
+            listBoxOrdinacije.Items.Clear();
+            listBoxZaposleni.Items.Clear();
             //Lists all ordinacije in ordinacije list box
             using (NpgsqlConnection con = new NpgsqlConnection(baza))
             {
