@@ -122,5 +122,11 @@ namespace veterinarske_ordinacije
         {
             ResetDefault();
         }
+
+        private void comboBoxKraji_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Enables the search button when something is selected to search
+            btnSearch.Enabled = true;
+        }
     }
 }

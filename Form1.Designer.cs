@@ -91,6 +91,7 @@ namespace veterinarske_ordinacije
             this.comboBoxKraji.Size = new System.Drawing.Size(409, 28);
             this.comboBoxKraji.Sorted = true;
             this.comboBoxKraji.TabIndex = 3;
+            this.comboBoxKraji.SelectedIndexChanged += new System.EventHandler(this.comboBoxKraji_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -116,6 +117,7 @@ namespace veterinarske_ordinacije
             // btnSearch
             // 
             this.btnSearch.AutoSize = true;
+            this.btnSearch.Enabled = false;
             this.btnSearch.Location = new System.Drawing.Point(463, 17);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 30);
