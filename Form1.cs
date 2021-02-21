@@ -140,7 +140,13 @@ namespace veterinarske_ordinacije
 
         private void btnOrdinacijeVnos_Click(object sender, EventArgs e)
         {
-
+            using (NpgsqlConnection con = new NpgsqlConnection(baza))
+            {
+                con.Open();
+                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM vnosOrdinacija('" + textBoxOrdinacijaIme.Text + "', '" + textBoxOrdinacijaNaslov.Text + "', '" + comboBoxKraj.Text.Substring(comboBoxKraj.Text.Length - 4) + "')", con);
+                com.ExecuteNonQuery();
+                con.Close();
+            }
         }
     }
 }
