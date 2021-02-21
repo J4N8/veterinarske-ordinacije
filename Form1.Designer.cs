@@ -358,6 +358,7 @@ namespace veterinarske_ordinacije
             this.SettingsButton.TabIndex = 9;
             this.SettingsButton.Text = "Settings";
             this.SettingsButton.UseVisualStyleBackColor = true;
+            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
             // Form1
             // 

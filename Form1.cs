@@ -128,5 +128,11 @@ namespace veterinarske_ordinacije
             //Enables the search button when something is selected to search
             btnSearch.Enabled = true;
         }
+
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            Form settingsForm = new Settings();
+            settingsForm.Show();
+        }
     }
 }

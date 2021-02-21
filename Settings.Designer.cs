@@ -39,6 +39,15 @@ namespace veterinarske_ordinacije
             // BackgroundColorComboBox
             // 
             this.BackgroundColorComboBox.FormattingEnabled = true;
+            this.BackgroundColorComboBox.Items.AddRange(new object[] {
+            "White",
+            "Black",
+            "Red",
+            "Orange",
+            "Yellow",
+            "Green",
+            "Blue",
+            "Purple"});
             this.BackgroundColorComboBox.Location = new System.Drawing.Point(160, 10);
             this.BackgroundColorComboBox.Name = "BackgroundColorComboBox";
             this.BackgroundColorComboBox.Size = new System.Drawing.Size(247, 28);
@@ -65,6 +74,15 @@ namespace veterinarske_ordinacije
             // TextColorComboBox
             // 
             this.TextColorComboBox.FormattingEnabled = true;
+            this.TextColorComboBox.Items.AddRange(new object[] {
+            "White",
+            "Black",
+            "Red",
+            "Orange",
+            "Yellow",
+            "Green",
+            "Blue",
+            "Purple"});
             this.TextColorComboBox.Location = new System.Drawing.Point(160, 48);
             this.TextColorComboBox.Name = "TextColorComboBox";
             this.TextColorComboBox.Size = new System.Drawing.Size(247, 28);
@@ -90,6 +108,7 @@ namespace veterinarske_ordinacije
             this.Controls.Add(this.TextColorComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BackgroundColorComboBox);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Settings";
             this.Text = "Settings";
             this.ResumeLayout(false);
