@@ -428,6 +428,7 @@ namespace veterinarske_ordinacije
             this.KrajVnosButton.TabIndex = 12;
             this.KrajVnosButton.Text = "Vnos";
             this.KrajVnosButton.UseVisualStyleBackColor = true;
+            this.KrajVnosButton.Click += new System.EventHandler(this.KrajVnosButton_Click);
             // 
             // label9
             // 

@@ -166,5 +166,16 @@ namespace veterinarske_ordinacije
             Form LoginForm = new Login();
             LoginForm.Show();
         }
+
+        private void KrajVnosButton_Click(object sender, EventArgs e)
+        {
+            using (NpgsqlConnection con = new NpgsqlConnection(baza))
+            {
+                con.Open();
+                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM vnosKrajDrzava('" + KrajTextBox.Text + "', '" + PostaTextBox.Text + "', '" + DrzavaTextBox.Text + "')", con);
+                com.ExecuteNonQuery();
+                con.Close();
+            }
+        }
     }
 }
