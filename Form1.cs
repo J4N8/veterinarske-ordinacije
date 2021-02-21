@@ -155,7 +155,6 @@ namespace veterinarske_ordinacije
             {
                 con.Open();
                 NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM vnosZaposleni('" + textBoxZaposleniIme.Text + "', '" + textBoxZaposleniPriimek.Text + "', '" + dateTimePickerDatumRoj.Value.Date.ToString("yyyy-MM-dd") + "', '" + comboBoxOrdinacija.Text.Split('|')[0].Trim() + "')", con);
-                MessageBox.Show(com.CommandText);
                 com.ExecuteNonQuery();
                 con.Close();
             }
