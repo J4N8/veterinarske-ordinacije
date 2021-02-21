@@ -58,6 +58,7 @@ namespace veterinarske_ordinacije
             this.textBoxZaposleniIme = new System.Windows.Forms.TextBox();
             this.comboBoxOrdinacija = new System.Windows.Forms.ComboBox();
             this.btnReset = new System.Windows.Forms.Button();
+            this.SettingsButton = new System.Windows.Forms.Button();
             this.groupBoxSearch.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageOrdinacije.SuspendLayout();
@@ -340,13 +341,23 @@ namespace veterinarske_ordinacije
             // btnReset
             // 
             this.btnReset.AutoSize = true;
-            this.btnReset.Location = new System.Drawing.Point(1043, 36);
+            this.btnReset.Location = new System.Drawing.Point(568, 34);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 30);
             this.btnReset.TabIndex = 8;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // SettingsButton
+            // 
+            this.SettingsButton.AutoSize = true;
+            this.SettingsButton.Location = new System.Drawing.Point(1059, 12);
+            this.SettingsButton.Name = "SettingsButton";
+            this.SettingsButton.Size = new System.Drawing.Size(78, 30);
+            this.SettingsButton.TabIndex = 9;
+            this.SettingsButton.Text = "Settings";
+            this.SettingsButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -355,6 +366,7 @@ namespace veterinarske_ordinacije
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1149, 915);
+            this.Controls.Add(this.SettingsButton);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.listBoxZaposleni);
@@ -407,6 +419,7 @@ namespace veterinarske_ordinacije
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dateTimePickerDatumRoj;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button SettingsButton;
     }
 }
 
