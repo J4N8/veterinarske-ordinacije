@@ -59,6 +59,7 @@ namespace veterinarske_ordinacije
             this.comboBoxOrdinacija = new System.Windows.Forms.ComboBox();
             this.btnReset = new System.Windows.Forms.Button();
             this.SettingsButton = new System.Windows.Forms.Button();
+            this.LoginButton = new System.Windows.Forms.Button();
             this.groupBoxSearch.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageOrdinacije.SuspendLayout();
@@ -367,6 +368,17 @@ namespace veterinarske_ordinacije
             this.SettingsButton.UseVisualStyleBackColor = true;
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
             // 
+            // LoginButton
+            // 
+            this.LoginButton.AutoSize = true;
+            this.LoginButton.Location = new System.Drawing.Point(975, 12);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(78, 30);
+            this.LoginButton.TabIndex = 10;
+            this.LoginButton.Text = "Login";
+            this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -374,6 +386,7 @@ namespace veterinarske_ordinacije
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1149, 915);
+            this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.SettingsButton);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.tabControl1);
@@ -428,6 +441,7 @@ namespace veterinarske_ordinacije
         private System.Windows.Forms.DateTimePicker dateTimePickerDatumRoj;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button SettingsButton;
+        private System.Windows.Forms.Button LoginButton;
     }
 }
 

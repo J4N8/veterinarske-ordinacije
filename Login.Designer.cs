@@ -34,7 +34,7 @@ namespace veterinarske_ordinacije
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.GesloTextBox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.NewPassTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.ResetPasswordButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -48,6 +48,7 @@ namespace veterinarske_ordinacije
             this.LoginButton.TabIndex = 0;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // ImeTextBox
             // 
@@ -81,12 +82,12 @@ namespace veterinarske_ordinacije
             this.GesloTextBox.Size = new System.Drawing.Size(278, 26);
             this.GesloTextBox.TabIndex = 3;
             // 
-            // textBox1
+            // NewPassTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(114, 123);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(278, 26);
-            this.textBox1.TabIndex = 5;
+            this.NewPassTextBox.Location = new System.Drawing.Point(114, 123);
+            this.NewPassTextBox.Name = "NewPassTextBox";
+            this.NewPassTextBox.Size = new System.Drawing.Size(278, 26);
+            this.NewPassTextBox.TabIndex = 5;
             // 
             // label3
             // 
@@ -106,6 +107,7 @@ namespace veterinarske_ordinacije
             this.ResetPasswordButton.TabIndex = 7;
             this.ResetPasswordButton.Text = "Change password";
             this.ResetPasswordButton.UseVisualStyleBackColor = true;
+            this.ResetPasswordButton.Click += new System.EventHandler(this.ResetPasswordButton_Click);
             // 
             // Login
             // 
@@ -114,7 +116,7 @@ namespace veterinarske_ordinacije
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ResetPasswordButton);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.NewPassTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.GesloTextBox);
             this.Controls.Add(this.label1);
@@ -122,6 +124,7 @@ namespace veterinarske_ordinacije
             this.Controls.Add(this.LoginButton);
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,7 +137,7 @@ namespace veterinarske_ordinacije
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox GesloTextBox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox NewPassTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button ResetPasswordButton;
     }

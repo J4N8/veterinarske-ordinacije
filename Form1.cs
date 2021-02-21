@@ -160,5 +160,11 @@ namespace veterinarske_ordinacije
                 con.Close();
             }
         }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            Form LoginForm = new Login();
+            LoginForm.Show();
+        }
     }
 }
