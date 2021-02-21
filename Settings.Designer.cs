@@ -32,7 +32,7 @@ namespace veterinarske_ordinacije
             this.BackgroundColorComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TextColorLabel = new System.Windows.Forms.Label();
-            this.TextColorComboBox = new System.Windows.Forms.ComboBox();
+            this.FontColorComboBox = new System.Windows.Forms.ComboBox();
             this.SaveSettingsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -71,10 +71,10 @@ namespace veterinarske_ordinacije
             this.TextColorLabel.TabIndex = 3;
             this.TextColorLabel.Text = "Text color: ";
             // 
-            // TextColorComboBox
+            // FontColorComboBox
             // 
-            this.TextColorComboBox.FormattingEnabled = true;
-            this.TextColorComboBox.Items.AddRange(new object[] {
+            this.FontColorComboBox.FormattingEnabled = true;
+            this.FontColorComboBox.Items.AddRange(new object[] {
             "White",
             "Black",
             "Red",
@@ -83,10 +83,10 @@ namespace veterinarske_ordinacije
             "Green",
             "Blue",
             "Purple"});
-            this.TextColorComboBox.Location = new System.Drawing.Point(160, 48);
-            this.TextColorComboBox.Name = "TextColorComboBox";
-            this.TextColorComboBox.Size = new System.Drawing.Size(247, 28);
-            this.TextColorComboBox.TabIndex = 2;
+            this.FontColorComboBox.Location = new System.Drawing.Point(160, 48);
+            this.FontColorComboBox.Name = "FontColorComboBox";
+            this.FontColorComboBox.Size = new System.Drawing.Size(247, 28);
+            this.FontColorComboBox.TabIndex = 2;
             // 
             // SaveSettingsButton
             // 
@@ -105,12 +105,13 @@ namespace veterinarske_ordinacije
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.SaveSettingsButton);
             this.Controls.Add(this.TextColorLabel);
-            this.Controls.Add(this.TextColorComboBox);
+            this.Controls.Add(this.FontColorComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BackgroundColorComboBox);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Settings";
             this.Text = "Settings";
+            this.Load += new System.EventHandler(this.Settings_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,7 +122,7 @@ namespace veterinarske_ordinacije
         private System.Windows.Forms.ComboBox BackgroundColorComboBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label TextColorLabel;
-        private System.Windows.Forms.ComboBox TextColorComboBox;
+        private System.Windows.Forms.ComboBox FontColorComboBox;
         private System.Windows.Forms.Button SaveSettingsButton;
     }
 }

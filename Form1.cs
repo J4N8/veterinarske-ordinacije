@@ -13,7 +13,7 @@ namespace veterinarske_ordinacije
 {
     public partial class Form1 : Form
     {
-        private string baza = "Server=rogue.db.elephantsql.com; User Id=ercqedby;" + "Password=GtZ43Cgtya5QVYjQLsVKUw8TUX8elf0k; Database=ercqedby;";
+        public static readonly string baza = "Server=rogue.db.elephantsql.com; User Id=ercqedby;" + "Password=GtZ43Cgtya5QVYjQLsVKUw8TUX8elf0k; Database=ercqedby;";
         public Form1()
         {
             InitializeComponent();
@@ -95,6 +95,21 @@ namespace veterinarske_ordinacije
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //set font and background color from database
+            using (NpgsqlConnection con = new NpgsqlConnection(baza))
+            {
+                con.Open();
+                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM getSettings()", con);
+                NpgsqlDataReader reader = com.ExecuteReader();
+                while (reader.Read())
+                {
+                    string backgroundColor = reader.GetString(0);
+                    string fontColor = reader.GetString(1);
+                    this.BackColor = Color.FromName(backgroundColor);
+                    this.ForeColor = Color.FromName(fontColor);
+                }
+                con.Close();
+            }
             ResetDefault();
         }
 
