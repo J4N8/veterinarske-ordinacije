@@ -38,5 +38,17 @@ namespace veterinarske_ordinacije
                 con.Close();
             }
         }
+
+        private void SaveSettingsButton_Click(object sender, EventArgs e)
+        {
+            //Saves settings
+            using (NpgsqlConnection con = new NpgsqlConnection(Form1.baza))
+            {
+                con.Open();
+                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM saveSettings('" + BackgroundColorComboBox.SelectedItem.ToString() + "', '" + FontColorComboBox.SelectedItem.ToString() + "')", con);
+                com.ExecuteNonQuery();
+                con.Close();
+            }
+        }
     }
 }

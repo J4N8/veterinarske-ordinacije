@@ -97,6 +97,7 @@ namespace veterinarske_ordinacije
             this.SaveSettingsButton.TabIndex = 4;
             this.SaveSettingsButton.Text = "Save";
             this.SaveSettingsButton.UseVisualStyleBackColor = true;
+            this.SaveSettingsButton.Click += new System.EventHandler(this.SaveSettingsButton_Click);
             // 
             // Settings
             // 
