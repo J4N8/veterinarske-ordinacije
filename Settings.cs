@@ -49,6 +49,10 @@ namespace veterinarske_ordinacije
                 com.ExecuteNonQuery();
                 con.Close();
             }
+
+            //Shows message box and closes settings form
+            MessageBox.Show("Restart for changes to apply!");
+            this.Close();
         }
     }
 }
