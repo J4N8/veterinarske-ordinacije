@@ -36,6 +36,7 @@ namespace veterinarske_ordinacije
                     string naslov = reader.GetString(1);
                     string kraj = reader.GetString(2);
                     listBoxOrdinacije.Items.Add(ime + " | " + naslov + ", " + kraj);
+                    comboBoxOrdinacija.Items.Add(ime + " | " + naslov + ", " + kraj);
                 }
                 con.Close();
             }
@@ -57,7 +58,7 @@ namespace veterinarske_ordinacije
                 con.Close();
             }
 
-            //Lists all kraji in kraji combo box
+            //Lists all kraji in kraji combo box & kraji list box
             using (NpgsqlConnection con = new NpgsqlConnection(baza))
             {
                 con.Open();
@@ -68,20 +69,7 @@ namespace veterinarske_ordinacije
                     string ime = reader.GetString(0);
                     string posta = reader.GetString(1);
                     comboBoxKraji.Items.Add(ime + ", " + posta);
-                }
-                con.Close();
-            }
-
-            //Displays all kraji in list box
-            using (NpgsqlConnection con = new NpgsqlConnection(baza))
-            {
-                con.Open();
-                NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM izpisKraji()", con);
-                NpgsqlDataReader reader = com.ExecuteReader();
-                while (reader.Read())
-                {
-                    string ime = reader.GetString(0);
-                    string posta = reader.GetString(1);
+                    comboBoxKraj.Items.Add(ime + ", " + posta);
                     listBoxKraji.Items.Add(ime + ", " + posta);
                 }
                 con.Close();
@@ -148,6 +136,11 @@ namespace veterinarske_ordinacije
         {
             Form settingsForm = new Settings();
             settingsForm.Show();
+        }
+
+        private void btnOrdinacijeVnos_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

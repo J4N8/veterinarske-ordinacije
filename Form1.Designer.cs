@@ -183,6 +183,7 @@ namespace veterinarske_ordinacije
             this.btnOrdinacijeVnos.TabIndex = 6;
             this.btnOrdinacijeVnos.Text = "Vnos";
             this.btnOrdinacijeVnos.UseVisualStyleBackColor = true;
+            this.btnOrdinacijeVnos.Click += new System.EventHandler(this.btnOrdinacijeVnos_Click);
             // 
             // label4
             // 
