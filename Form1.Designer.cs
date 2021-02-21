@@ -167,6 +167,7 @@ namespace veterinarske_ordinacije
             // btnOrdinacijeUpdate
             // 
             this.btnOrdinacijeUpdate.AutoSize = true;
+            this.btnOrdinacijeUpdate.Enabled = false;
             this.btnOrdinacijeUpdate.Location = new System.Drawing.Point(235, 235);
             this.btnOrdinacijeUpdate.Name = "btnOrdinacijeUpdate";
             this.btnOrdinacijeUpdate.Size = new System.Drawing.Size(85, 30);
@@ -276,6 +277,7 @@ namespace veterinarske_ordinacije
             // btnZaposleniUpdate
             // 
             this.btnZaposleniUpdate.AutoSize = true;
+            this.btnZaposleniUpdate.Enabled = false;
             this.btnZaposleniUpdate.Location = new System.Drawing.Point(235, 243);
             this.btnZaposleniUpdate.Name = "btnZaposleniUpdate";
             this.btnZaposleniUpdate.Size = new System.Drawing.Size(85, 30);
