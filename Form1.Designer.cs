@@ -60,10 +60,20 @@ namespace veterinarske_ordinacije
             this.btnReset = new System.Windows.Forms.Button();
             this.SettingsButton = new System.Windows.Forms.Button();
             this.LoginButton = new System.Windows.Forms.Button();
+            this.tabPageKraji = new System.Windows.Forms.TabPage();
+            this.KrajUpdateButton = new System.Windows.Forms.Button();
+            this.KrajVnosButton = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.PostaTextBox = new System.Windows.Forms.TextBox();
+            this.KrajTextBox = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.DrzavaTextBox = new System.Windows.Forms.TextBox();
             this.groupBoxSearch.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageOrdinacije.SuspendLayout();
             this.tabPageZaposleni.SuspendLayout();
+            this.tabPageKraji.SuspendLayout();
             this.SuspendLayout();
             // 
             // listBoxKraji
@@ -141,6 +151,7 @@ namespace veterinarske_ordinacije
             // 
             this.tabControl1.Controls.Add(this.tabPageOrdinacije);
             this.tabControl1.Controls.Add(this.tabPageZaposleni);
+            this.tabControl1.Controls.Add(this.tabPageKraji);
             this.tabControl1.Location = new System.Drawing.Point(568, 488);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -379,6 +390,93 @@ namespace veterinarske_ordinacije
             this.LoginButton.UseVisualStyleBackColor = true;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
+            // tabPageKraji
+            // 
+            this.tabPageKraji.Controls.Add(this.label11);
+            this.tabPageKraji.Controls.Add(this.DrzavaTextBox);
+            this.tabPageKraji.Controls.Add(this.KrajUpdateButton);
+            this.tabPageKraji.Controls.Add(this.KrajVnosButton);
+            this.tabPageKraji.Controls.Add(this.label9);
+            this.tabPageKraji.Controls.Add(this.label10);
+            this.tabPageKraji.Controls.Add(this.PostaTextBox);
+            this.tabPageKraji.Controls.Add(this.KrajTextBox);
+            this.tabPageKraji.Location = new System.Drawing.Point(4, 29);
+            this.tabPageKraji.Name = "tabPageKraji";
+            this.tabPageKraji.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageKraji.Size = new System.Drawing.Size(542, 371);
+            this.tabPageKraji.TabIndex = 2;
+            this.tabPageKraji.Text = "Kraji";
+            this.tabPageKraji.UseVisualStyleBackColor = true;
+            // 
+            // KrajUpdateButton
+            // 
+            this.KrajUpdateButton.AutoSize = true;
+            this.KrajUpdateButton.Enabled = false;
+            this.KrajUpdateButton.Location = new System.Drawing.Point(230, 177);
+            this.KrajUpdateButton.Name = "KrajUpdateButton";
+            this.KrajUpdateButton.Size = new System.Drawing.Size(85, 30);
+            this.KrajUpdateButton.TabIndex = 13;
+            this.KrajUpdateButton.Text = "Posodobi";
+            this.KrajUpdateButton.UseVisualStyleBackColor = true;
+            // 
+            // KrajVnosButton
+            // 
+            this.KrajVnosButton.AutoSize = true;
+            this.KrajVnosButton.Location = new System.Drawing.Point(71, 177);
+            this.KrajVnosButton.Name = "KrajVnosButton";
+            this.KrajVnosButton.Size = new System.Drawing.Size(75, 30);
+            this.KrajVnosButton.TabIndex = 12;
+            this.KrajVnosButton.Text = "Vnos";
+            this.KrajVnosButton.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 60);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(58, 20);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Pošta: ";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 14);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(44, 20);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Ime: ";
+            // 
+            // PostaTextBox
+            // 
+            this.PostaTextBox.Location = new System.Drawing.Point(76, 57);
+            this.PostaTextBox.Name = "PostaTextBox";
+            this.PostaTextBox.Size = new System.Drawing.Size(460, 26);
+            this.PostaTextBox.TabIndex = 9;
+            // 
+            // KrajTextBox
+            // 
+            this.KrajTextBox.Location = new System.Drawing.Point(76, 11);
+            this.KrajTextBox.Name = "KrajTextBox";
+            this.KrajTextBox.Size = new System.Drawing.Size(460, 26);
+            this.KrajTextBox.TabIndex = 8;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 99);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(67, 20);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Država: ";
+            // 
+            // DrzavaTextBox
+            // 
+            this.DrzavaTextBox.Location = new System.Drawing.Point(76, 96);
+            this.DrzavaTextBox.Name = "DrzavaTextBox";
+            this.DrzavaTextBox.Size = new System.Drawing.Size(460, 26);
+            this.DrzavaTextBox.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -404,6 +502,8 @@ namespace veterinarske_ordinacije
             this.tabPageOrdinacije.PerformLayout();
             this.tabPageZaposleni.ResumeLayout(false);
             this.tabPageZaposleni.PerformLayout();
+            this.tabPageKraji.ResumeLayout(false);
+            this.tabPageKraji.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -442,6 +542,15 @@ namespace veterinarske_ordinacije
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button SettingsButton;
         private System.Windows.Forms.Button LoginButton;
+        private System.Windows.Forms.TabPage tabPageKraji;
+        private System.Windows.Forms.Button KrajUpdateButton;
+        private System.Windows.Forms.Button KrajVnosButton;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox PostaTextBox;
+        private System.Windows.Forms.TextBox KrajTextBox;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox DrzavaTextBox;
     }
 }
 
