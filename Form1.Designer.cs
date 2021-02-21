@@ -256,6 +256,9 @@ namespace veterinarske_ordinacije
             // 
             // dateTimePickerDatumRoj
             // 
+            this.dateTimePickerDatumRoj.CustomFormat = "";
+            this.dateTimePickerDatumRoj.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerDatumRoj.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dateTimePickerDatumRoj.Location = new System.Drawing.Point(117, 107);
             this.dateTimePickerDatumRoj.Name = "dateTimePickerDatumRoj";
             this.dateTimePickerDatumRoj.Size = new System.Drawing.Size(416, 26);
@@ -289,6 +292,7 @@ namespace veterinarske_ordinacije
             this.btnZaposleniVnos.TabIndex = 14;
             this.btnZaposleniVnos.Text = "Vnos";
             this.btnZaposleniVnos.UseVisualStyleBackColor = true;
+            this.btnZaposleniVnos.Click += new System.EventHandler(this.btnZaposleniVnos_Click);
             // 
             // label5
             // 
