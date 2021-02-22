@@ -57,18 +57,18 @@ namespace veterinarske_ordinacije
             this.textBoxZaposleniPriimek = new System.Windows.Forms.TextBox();
             this.textBoxZaposleniIme = new System.Windows.Forms.TextBox();
             this.comboBoxOrdinacija = new System.Windows.Forms.ComboBox();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.SettingsButton = new System.Windows.Forms.Button();
-            this.LoginButton = new System.Windows.Forms.Button();
             this.tabPageKraji = new System.Windows.Forms.TabPage();
+            this.label11 = new System.Windows.Forms.Label();
+            this.DrzavaTextBox = new System.Windows.Forms.TextBox();
             this.KrajUpdateButton = new System.Windows.Forms.Button();
             this.KrajVnosButton = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.PostaTextBox = new System.Windows.Forms.TextBox();
             this.KrajTextBox = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.DrzavaTextBox = new System.Windows.Forms.TextBox();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.SettingsButton = new System.Windows.Forms.Button();
+            this.LoginButton = new System.Windows.Forms.Button();
             this.groupBoxSearch.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageOrdinacije.SuspendLayout();
@@ -84,6 +84,7 @@ namespace veterinarske_ordinacije
             this.listBoxKraji.Name = "listBoxKraji";
             this.listBoxKraji.Size = new System.Drawing.Size(550, 404);
             this.listBoxKraji.TabIndex = 0;
+            this.listBoxKraji.SelectedIndexChanged += new System.EventHandler(this.listBoxKraji_SelectedIndexChanged);
             // 
             // listBoxOrdinacije
             // 
@@ -93,6 +94,7 @@ namespace veterinarske_ordinacije
             this.listBoxOrdinacije.Name = "listBoxOrdinacije";
             this.listBoxOrdinacije.Size = new System.Drawing.Size(550, 404);
             this.listBoxOrdinacije.TabIndex = 2;
+            this.listBoxOrdinacije.SelectedIndexChanged += new System.EventHandler(this.listBoxOrdinacije_SelectedIndexChanged);
             // 
             // comboBoxKraji
             // 
@@ -146,6 +148,7 @@ namespace veterinarske_ordinacije
             this.listBoxZaposleni.Name = "listBoxZaposleni";
             this.listBoxZaposleni.Size = new System.Drawing.Size(550, 404);
             this.listBoxZaposleni.TabIndex = 6;
+            this.listBoxZaposleni.SelectedIndexChanged += new System.EventHandler(this.listBoxZaposleni_SelectedIndexChanged);
             // 
             // tabControl1
             // 
@@ -357,39 +360,6 @@ namespace veterinarske_ordinacije
             this.comboBoxOrdinacija.Size = new System.Drawing.Size(416, 28);
             this.comboBoxOrdinacija.TabIndex = 8;
             // 
-            // btnReset
-            // 
-            this.btnReset.AutoSize = true;
-            this.btnReset.Location = new System.Drawing.Point(568, 34);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(75, 30);
-            this.btnReset.TabIndex = 8;
-            this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // SettingsButton
-            // 
-            this.SettingsButton.AutoSize = true;
-            this.SettingsButton.Location = new System.Drawing.Point(1059, 12);
-            this.SettingsButton.Name = "SettingsButton";
-            this.SettingsButton.Size = new System.Drawing.Size(78, 30);
-            this.SettingsButton.TabIndex = 9;
-            this.SettingsButton.Text = "Settings";
-            this.SettingsButton.UseVisualStyleBackColor = true;
-            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
-            // 
-            // LoginButton
-            // 
-            this.LoginButton.AutoSize = true;
-            this.LoginButton.Location = new System.Drawing.Point(975, 12);
-            this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(78, 30);
-            this.LoginButton.TabIndex = 10;
-            this.LoginButton.Text = "Login";
-            this.LoginButton.UseVisualStyleBackColor = true;
-            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
-            // 
             // tabPageKraji
             // 
             this.tabPageKraji.Controls.Add(this.label11);
@@ -407,6 +377,22 @@ namespace veterinarske_ordinacije
             this.tabPageKraji.TabIndex = 2;
             this.tabPageKraji.Text = "Kraji";
             this.tabPageKraji.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 99);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(67, 20);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Država: ";
+            // 
+            // DrzavaTextBox
+            // 
+            this.DrzavaTextBox.Location = new System.Drawing.Point(76, 96);
+            this.DrzavaTextBox.Name = "DrzavaTextBox";
+            this.DrzavaTextBox.Size = new System.Drawing.Size(460, 26);
+            this.DrzavaTextBox.TabIndex = 14;
             // 
             // KrajUpdateButton
             // 
@@ -462,21 +448,38 @@ namespace veterinarske_ordinacije
             this.KrajTextBox.Size = new System.Drawing.Size(460, 26);
             this.KrajTextBox.TabIndex = 8;
             // 
-            // label11
+            // btnReset
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 99);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(67, 20);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "Država: ";
+            this.btnReset.AutoSize = true;
+            this.btnReset.Location = new System.Drawing.Point(568, 34);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(75, 30);
+            this.btnReset.TabIndex = 8;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
-            // DrzavaTextBox
+            // SettingsButton
             // 
-            this.DrzavaTextBox.Location = new System.Drawing.Point(76, 96);
-            this.DrzavaTextBox.Name = "DrzavaTextBox";
-            this.DrzavaTextBox.Size = new System.Drawing.Size(460, 26);
-            this.DrzavaTextBox.TabIndex = 14;
+            this.SettingsButton.AutoSize = true;
+            this.SettingsButton.Location = new System.Drawing.Point(1059, 12);
+            this.SettingsButton.Name = "SettingsButton";
+            this.SettingsButton.Size = new System.Drawing.Size(78, 30);
+            this.SettingsButton.TabIndex = 9;
+            this.SettingsButton.Text = "Settings";
+            this.SettingsButton.UseVisualStyleBackColor = true;
+            this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
+            // 
+            // LoginButton
+            // 
+            this.LoginButton.AutoSize = true;
+            this.LoginButton.Location = new System.Drawing.Point(975, 12);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(78, 30);
+            this.LoginButton.TabIndex = 10;
+            this.LoginButton.Text = "Login";
+            this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // Form1
             // 

@@ -176,5 +176,27 @@ namespace veterinarske_ordinacije
                 con.Close();
             }
         }
+
+        private void listBoxOrdinacije_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //fills the fields for edit
+            textBoxOrdinacijaIme.Text = listBoxOrdinacije.SelectedItem.ToString().Split('|')[0].Trim();
+            textBoxOrdinacijaNaslov.Text = listBoxOrdinacije.SelectedItem.ToString().Split('|')[1].Split(',')[0].Trim();
+            comboBoxKraj.Text = listBoxOrdinacije.SelectedItem.ToString().Split(',')[1].Trim();
+        }
+
+        private void listBoxZaposleni_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //fills the fields for edit
+            textBoxZaposleniIme.Text = listBoxZaposleni.SelectedItem.ToString().Split(',')[0].Trim();
+            textBoxZaposleniPriimek.Text = listBoxZaposleni.SelectedItem.ToString().Split(',')[1].Split('|')[0].Trim();
+            comboBoxOrdinacija.Text = listBoxZaposleni.SelectedItem.ToString().Split('|')[1].Split(',')[0].Trim();
+        }
+
+        private void listBoxKraji_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            KrajTextBox.Text = listBoxKraji.SelectedItem.ToString().Split(',')[0].Trim();
+            PostaTextBox.Text = listBoxKraji.SelectedItem.ToString().Split(',')[1].Trim();
+        }
     }
 }
