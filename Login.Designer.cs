@@ -79,6 +79,7 @@ namespace veterinarske_ordinacije
             // 
             this.GesloTextBox.Location = new System.Drawing.Point(78, 45);
             this.GesloTextBox.Name = "GesloTextBox";
+            this.GesloTextBox.PasswordChar = '*';
             this.GesloTextBox.Size = new System.Drawing.Size(278, 26);
             this.GesloTextBox.TabIndex = 3;
             // 
@@ -86,6 +87,7 @@ namespace veterinarske_ordinacije
             // 
             this.NewPassTextBox.Location = new System.Drawing.Point(114, 123);
             this.NewPassTextBox.Name = "NewPassTextBox";
+            this.NewPassTextBox.PasswordChar = '*';
             this.NewPassTextBox.Size = new System.Drawing.Size(278, 26);
             this.NewPassTextBox.TabIndex = 5;
             // 
